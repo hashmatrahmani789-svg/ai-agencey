@@ -3,29 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agencey — I build the systems behind your business</title>
-<meta name="description" content="AI Agencey — websites, AI chatbots, review automation, and appointment booking built for local trade businesses.">
+<title>GetWebNow — Websites and automation that help your business make more money</title>
+<meta name="description" content="GetWebNow helps businesses update their website, add automations, and fix the problems that lose leads — so more customers book, pay, and come back.">
+<link rel="canonical" href="https://getwebnow.co">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getwebnow.co">
+<meta property="og:site_name" content="GetWebNow">
+<meta property="og:title" content="GetWebNow — Help your business make more money">
+<meta property="og:description" content="Update your website. Automate the busywork. Capture more leads. GetWebNow solves the problems that keep your business from growing.">
+<meta property="og:image" content="https://getwebnow.co/og-image.png">
+<meta property="og:image:alt" content="GetWebNow — websites and automation that help businesses grow">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GetWebNow — Help your business make more money">
+<meta name="twitter:description" content="Update your website. Automate the busywork. Capture more leads. GetWebNow solves the problems that keep your business from growing.">
+<meta name="twitter:image" content="https://getwebnow.co/og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://cal.com">
+<link rel="dns-prefetch" href="https://cal.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
-    --bg: #FAF9F6;
-    --bg-alt: #F1EFE9;
+    --bg: #F7F5F0;
+    --bg-alt: #EDEAE3;
     --surface: #FFFFFF;
-    --ink: #14171F;
-    --ink-dim: #565B66;
-    --ink-faint: #93969E;
-    --border: #E3E0D7;
-    --border-strong: #CFCABC;
-    --navy: #182A4A;
-    --navy-2: #2A4470;
-    --brass: #A9814A;
-    --brass-soft: rgba(169,129,74,0.12);
-    --ok: #3B6E52;
+    --ink: #10141C;
+    --ink-dim: #3A404C;
+    --ink-faint: #6A7080;
+    --border: #DCD7CC;
+    --border-strong: #C4BDB0;
+    --navy: #13233F;
+    --navy-2: #243C66;
+    --blue: #2563EB;
+    --blue-2: #1D4ED8;
+    --brass: #B8893F;
+    --brass-soft: rgba(184,137,63,0.16);
+    --ok: #2F6A4A;
     --serif: 'Fraunces', serif;
     --body: 'Inter', sans-serif;
-    --mono: 'JetBrains Mono', monospace;
+    --mono: ui-monospace, 'Segoe UI Mono', monospace;
   }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -36,109 +55,131 @@
     background: var(--bg);
     color: var(--ink);
     font-family: var(--body);
+    font-size: 17px;
     line-height: 1.65;
     overflow-x:hidden;
   }
 
   a{ color:inherit; text-decoration:none; }
   ul{ list-style:none; }
+  button{ font-family:inherit; }
   .wrap{ max-width:1160px; margin:0 auto; padding:0 24px; }
 
-  .reveal{ opacity:0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.in{ opacity:1; transform:none; }
-
   .eyebrow{
-    font-family: var(--mono); font-size:0.72rem; color:var(--brass);
-    letter-spacing:0.14em; text-transform:uppercase;
+    font-family: var(--mono); font-size:0.78rem; color:var(--brass);
+    letter-spacing:0.14em; text-transform:uppercase; font-weight:600;
     display:flex; align-items:center; gap:10px; margin-bottom:22px;
   }
-  .eyebrow::before{ content:""; width:24px; height:1px; background:var(--brass); }
+  .eyebrow::before{ content:""; width:24px; height:2px; background:var(--brass); }
+
+  .lift{
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .lift:hover, .lift:focus-visible{
+    transform: translateY(-10px);
+    box-shadow: 0 28px 48px -18px rgba(16,20,28,0.35);
+  }
+  .lift:active{
+    transform: translateY(-14px) scale(1.03);
+    box-shadow: 0 32px 56px -16px rgba(16,20,28,0.42);
+  }
 
   /* ---------- Header ---------- */
   header{
-    position:sticky; top:0; z-index:60;
-    background: rgba(250,249,246,0.9);
-    backdrop-filter: blur(10px);
+    position:sticky; top:0; z-index:80;
+    background: rgba(247,245,240,0.94);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
   nav.wrap{ display:flex; align-items:center; justify-content:space-between; height:78px; }
   .logo{
-    font-family: var(--serif); font-weight:600; font-size:1.25rem;
-    letter-spacing:-0.01em; color: var(--navy);
-    display:flex; align-items:center; gap:9px;
+    font-family: var(--serif); font-weight:600; font-size:1.32rem;
+    letter-spacing:-0.02em; color: var(--navy);
+    display:flex; align-items:center; gap:10px;
   }
-  .logo .mark{
-    width:7px; height:7px; background: var(--brass); border-radius:1px; transform: rotate(45deg);
-  }
-  .nav-links{ display:flex; gap:32px; font-size:0.87rem; color: var(--ink-dim); }
+  .logo-mark{ width:34px; height:34px; display:block; flex-shrink:0; }
+  .nav-links{ display:flex; gap:32px; font-size:0.92rem; font-weight:500; color: var(--ink-dim); }
   .nav-links a{ position:relative; padding-bottom:3px; }
   .nav-links a::after{
-    content:""; position:absolute; left:0; bottom:0; width:0; height:1px;
+    content:""; position:absolute; left:0; bottom:0; width:0; height:2px;
     background: var(--brass); transition: width 0.25s ease;
   }
   .nav-links a:hover{ color: var(--ink); }
   .nav-links a:hover::after{ width:100%; }
-  .nav-cta{
-    font-family: var(--mono); font-size:0.76rem; padding:10px 20px;
-    border:1px solid var(--navy); border-radius:2px; color: var(--navy);
-    transition: all 0.2s ease;
+  .nav-cta, .btn{
+    font-family: var(--mono); border-radius:2px; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    cursor:pointer; border:none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
-  .nav-cta:hover{ background: var(--navy); color:#fff; }
+  .nav-cta{
+    font-size:0.8rem; padding:11px 22px;
+    background: var(--blue); color:#fff;
+  }
+  .nav-cta:hover, .btn-primary:hover, .submit-btn:hover{
+    background: var(--blue-2); transform: translateY(-4px); box-shadow: 0 14px 28px -12px rgba(37,99,235,0.55);
+  }
+  .nav-cta:active, .btn-primary:active, .btn-ghost:active, .pill-btn:active, .submit-btn:active{
+    transform: translateY(-7px) scale(1.04);
+  }
 
   /* ---------- Hero ---------- */
-  .hero{ position:relative; padding: 130px 0 110px; overflow:hidden; }
-  #network{ position:absolute; inset:0; z-index:0; opacity:0.5; }
-  .hero-inner{ position:relative; z-index:1; max-width:800px; }
+  .hero{
+    position:sticky; top:78px; z-index:1;
+    min-height: calc(100vh - 78px);
+    padding: 96px 0 80px; overflow:hidden;
+    background: var(--bg);
+  }
+  #network{ position:absolute; inset:0; z-index:0; opacity:0.42; }
+  .hero-inner{ position:relative; z-index:1; max-width:820px; }
   h1{
     font-family: var(--serif); font-weight:600;
-    font-size: clamp(2.5rem, 5.4vw, 4rem);
-    line-height:1.08; letter-spacing:-0.01em; margin-bottom:28px; color: var(--navy);
+    font-size: clamp(2.85rem, 6vw, 4.5rem);
+    line-height:1.06; letter-spacing:-0.02em; margin-bottom:24px; color: var(--navy);
   }
   h1 em{ font-style: italic; color: var(--brass); font-weight:500; }
-  .hero p.lead{ color: var(--ink-dim); font-size:1.14rem; max-width:520px; margin-bottom:40px; }
-  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 64px; }
+  .hero p.lead{ color: var(--ink-dim); font-size:1.28rem; max-width:560px; margin-bottom:40px; font-weight:450; }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 56px; }
 
-  .btn{ font-family: var(--mono); font-size:0.84rem; padding:15px 28px; border-radius:2px; display:inline-flex; align-items:center; gap:8px; transition: all 0.2s ease; }
-  .btn-primary{ background: var(--navy); color:#fff; }
-  .btn-primary:hover{ background: var(--navy-2); transform: translateY(-2px); }
-  .btn-ghost{ border:1px solid var(--border-strong); color: var(--ink-dim); }
-  .btn-ghost:hover{ border-color: var(--navy); color: var(--navy); }
+  .btn{ font-size:0.88rem; padding:16px 30px; }
+  .btn-primary{ background: var(--blue); color:#fff; }
+  .btn-ghost{ border:2px solid var(--navy); color: var(--navy); background:transparent; }
+  .btn-ghost:hover{ background: var(--navy); color:#fff; transform: translateY(-4px); }
 
   .hero-card{
-    font-family: var(--mono); font-size:0.85rem; background: var(--surface);
-    border:1px solid var(--border); border-radius:4px; padding:22px 24px; max-width:560px;
+    font-family: var(--mono); font-size:0.9rem; background: var(--surface);
+    border:1px solid var(--border); border-radius:6px; padding:24px 26px; max-width:560px;
     color: var(--ink-dim); box-shadow: 0 20px 50px -30px rgba(20,23,31,0.25);
   }
-  .hc-label{ color: var(--ink-faint); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px; }
-  .hc-line{ display:flex; gap:10px; margin-bottom:9px; align-items:center; }
+  .hc-label{ color: var(--ink-faint); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px; font-weight:600; }
+  .hc-line{ display:flex; gap:10px; margin-bottom:9px; align-items:center; color: var(--ink); }
   .hc-line .mkr{ color: var(--ok); }
 
   /* ---------- Section shared ---------- */
-  section{ position:relative; padding:110px 0; border-top:1px solid var(--border); }
-  .section-head{ max-width:640px; margin-bottom:62px; }
+  section{ position:relative; padding:110px 0; border-top:1px solid var(--border); background: var(--bg); z-index:2; }
+  .section-head{ max-width:680px; margin-bottom:62px; }
   h2{
     font-family: var(--serif); font-weight:600;
-    font-size: clamp(1.9rem, 3vw, 2.5rem); letter-spacing:-0.01em; margin-bottom:16px; color: var(--navy);
+    font-size: clamp(2.15rem, 3.6vw, 3.1rem); letter-spacing:-0.02em; margin-bottom:16px; color: var(--navy);
   }
-  .section-head p{ color: var(--ink-dim); font-size:1.02rem; }
+  .section-head p{ color: var(--ink-dim); font-size:1.14rem; }
 
-  /* ---------- Capabilities ---------- */
-  .cap-list{ border-top:1px solid var(--border); }
-  .cap-item{ border-bottom:1px solid var(--border); }
-  .cap-head{ display:flex; align-items:center; gap:24px; padding:32px 4px; cursor:pointer; transition: background 0.2s ease; }
-  .cap-head:hover{ background: rgba(169,129,74,0.04); }
-  .cap-num{ font-family: var(--serif); font-size:1rem; color: var(--ink-faint); width:34px; flex-shrink:0; }
-  .cap-title{ font-family: var(--serif); font-size:1.4rem; font-weight:600; flex:1; color: var(--navy); transition: color 0.2s ease; }
-  .cap-item.open .cap-title{ color: var(--brass); }
-  .cap-toggle{ font-family: var(--mono); font-size:1.1rem; color: var(--ink-faint); width:24px; text-align:center; transition: transform 0.3s ease; }
-  .cap-item.open .cap-toggle{ transform: rotate(45deg); color: var(--brass); }
-  .cap-body{ max-height:0; overflow:hidden; transition: max-height 0.35s ease; }
-  .cap-item.open .cap-body{ max-height:200px; }
-  .cap-body-inner{ padding:0 4px 34px 58px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start; }
-  .cap-thumb{ width:130px; height:88px; border-radius:6px; object-fit:cover; flex-shrink:0; border:1px solid var(--border); }
-  .cap-body-inner p{ color: var(--ink-dim); max-width:440px; font-size:0.96rem; }
-  .cap-tags{ display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start; max-width:220px; }
-  .cap-tag{ font-family: var(--mono); font-size:0.7rem; color: var(--ink-dim); border:1px solid var(--border-strong); padding:5px 11px; border-radius:2px; }
+  /* ---------- Our services ---------- */
+  .services-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:24px; }
+  .service-card{
+    background: var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden;
+    text-align:left; cursor:pointer; display:flex; flex-direction:column; width:100%; color:inherit;
+    padding:0;
+  }
+  .service-card:hover{ border-color: var(--navy); }
+  .service-img{ height:168px; width:100%; object-fit:cover; display:block; background: var(--bg-alt); }
+  .service-body{ padding:22px 22px 24px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .service-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .service-body h3{ font-family: var(--serif); font-size:1.28rem; color: var(--navy); }
+  .service-cta{
+    font-family: var(--mono); font-size:0.78rem; font-weight:600; color: var(--navy);
+    background: var(--brass-soft); padding:6px 10px; border-radius:3px; white-space:nowrap;
+  }
+  .service-body p{ color: var(--ink-dim); font-size:0.98rem; }
 
   /* ---------- Timeline ---------- */
   .timeline{ position:relative; padding-left:8px; }
@@ -150,137 +191,187 @@
   .tl-step:last-child{ padding-bottom:0; }
   .tl-dot{ width:40px; height:40px; border-radius:50%; background: var(--surface); border:1px solid var(--border-strong); display:flex; align-items:center; justify-content:center; font-family: var(--serif); font-size:0.92rem; color: var(--ink-dim); flex-shrink:0; z-index:1; }
   .tl-step.active .tl-dot{ border-color: var(--brass); color: var(--brass); background: var(--brass-soft); }
-  .tl-content h4{ font-family: var(--serif); font-size:1.18rem; font-weight:600; margin-bottom:6px; color: var(--navy); }
-  .tl-content p{ color: var(--ink-dim); font-size:0.95rem; max-width:460px; }
+  .tl-content h4{ font-family: var(--serif); font-size:1.28rem; font-weight:600; margin-bottom:6px; color: var(--navy); }
+  .tl-content p{ color: var(--ink-dim); font-size:1.02rem; max-width:460px; }
 
-  /* ---------- Selected Builds (case-study cards) ---------- */
+  /* ---------- Selected Builds ---------- */
   .builds-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:26px; }
   .build-card{
     background: var(--surface); border:1px solid var(--border); border-radius:12px;
     padding:28px; display:flex; flex-direction:column; gap:18px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .build-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 50px -30px rgba(20,23,31,0.3); }
-  .build-top{ display:flex; justify-content:space-between; align-items:center; }
+  .build-card:hover{ border-color: var(--navy); }
+  .build-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
   .build-tag{
-    font-family: var(--mono); font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase;
+    font-family: var(--mono); font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; font-weight:600;
     padding:5px 10px; border-radius:3px; border:1px solid var(--border-strong); color: var(--ink-faint);
   }
   .build-tag.live{ color: var(--ok); border-color: var(--ok); }
-  .build-name{ font-family: var(--serif); font-size:1.15rem; font-weight:600; color: var(--navy); }
-  .build-quote{ color: var(--ink-dim); font-size:0.94rem; font-style:italic; flex-grow:1; }
+  .build-name{ font-family: var(--serif); font-size:1.22rem; font-weight:600; color: var(--navy); }
+  .build-quote{ color: var(--ink-dim); font-size:1.02rem; font-style:italic; flex-grow:1; }
   .build-stat{
     border:1px solid var(--border); border-radius:6px; padding:14px 16px;
     display:flex; flex-direction:column; gap:6px;
   }
-  .build-stat .lbl{ font-family: var(--mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--ink-faint); }
-  .build-stat .val{ font-family: var(--mono); font-size:0.9rem; color: var(--navy); font-weight:600; text-align:left; line-height:1.4; }
+  .build-stat .lbl{ font-family: var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--ink-faint); font-weight:600; }
+  .build-stat .val{ font-family: var(--mono); font-size:0.92rem; color: var(--navy); font-weight:600; text-align:left; line-height:1.4; }
   .build-attr{ display:flex; align-items:center; gap:12px; padding-top:14px; border-top:1px solid var(--border); }
-  .build-avatar{ width:42px; height:42px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--border-strong); background: var(--bg-alt); }
-  .build-avatar.initials{ display:flex; align-items:center; justify-content:center; background: var(--navy); color: var(--brass); font-family: var(--serif); font-weight:600; font-size:0.82rem; }
-  .build-attr-name{ font-size:0.86rem; font-weight:600; color: var(--navy); }
-  .build-attr-role{ font-size:0.76rem; color: var(--ink-faint); }
-  .build-attr a{ color: var(--ink-faint); }
+  .build-avatar{ width:46px; height:46px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid var(--border-strong); background: var(--bg-alt); }
+  .build-attr-name{ font-size:0.92rem; font-weight:700; color: var(--navy); }
+  .build-attr-role{ font-size:0.8rem; color: var(--ink-faint); }
   .build-attr a:hover{ color: var(--brass); }
 
-  /* ---------- Sample builds ---------- */
-  .samples-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:28px; }
-  .browser-mock{ border:1px solid var(--border); border-radius:6px; overflow:hidden; background: var(--surface); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .browser-mock:hover{ transform: translateY(-6px); box-shadow: 0 24px 50px -30px rgba(20,23,31,0.3); }
-  .browser-bar{ display:flex; align-items:center; gap:6px; padding:11px 14px; background: var(--bg-alt); border-bottom:1px solid var(--border); }
-  .browser-bar span{ width:7px; height:7px; border-radius:50%; background: var(--border-strong); }
-  .browser-bar .url{ font-family:var(--mono); font-size:0.66rem; color: var(--ink-faint); margin-left:8px; }
-  .browser-preview{ height:200px; padding:22px; display:flex; flex-direction:column; gap:12px; background: var(--surface); }
-  .prev-nav{ display:flex; gap:14px; margin-bottom:6px; }
-  .prev-nav span{ width:26px; height:5px; border-radius:2px; background: var(--border-strong); }
-  .prev-bar{ height:8px; border-radius:2px; background: var(--bg-alt); }
-  .w70{width:70%;} .w50{width:50%;} .w35{width:35%;}
-  .prev-cta{ margin-top:auto; align-self:flex-start; font-family: var(--mono); font-size:0.64rem; padding:7px 14px; border-radius:2px; background: var(--brass-soft); color: var(--brass); }
-  .prev-bars{ display:flex; gap:6px; align-items:flex-end; height:36px; margin-top:8px; }
-  .prev-bars i{ width:10px; background: var(--navy); border-radius:1px; opacity:0.75; }
-  .sample-caption{ padding:18px 4px 0; }
-  .sample-caption h4{ font-family:var(--serif); font-size:1.02rem; font-weight:600; margin-bottom:4px; color: var(--navy); }
-  .sample-caption p{ color: var(--ink-faint); font-size:0.84rem; }
-
-  /* ---------- Signals ---------- */
-  .log-console{ background: var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
-  .log-line{ display:flex; gap:18px; padding:26px 30px; border-bottom:1px solid var(--border); align-items:center; }
-  .log-avatar{ width:44px; height:44px; border-radius:50%; object-fit:cover; flex-shrink:0; border:1px solid var(--border-strong); }
-  .log-line:last-child{ border-bottom:none; }
-  .log-tag{ font-family: var(--mono); color: var(--ok); flex-shrink:0; width:90px; font-size:0.78rem; padding-top:2px; }
-  .log-text{ color: var(--ink-dim); font-size:0.97rem; font-family: var(--serif); font-style: italic; }
-  .log-text strong{ color: var(--navy); font-weight:600; font-style: normal; font-family: var(--body); }
+  /* ---------- FAQ ---------- */
+  .faq-list{ border-top:1px solid var(--border); }
+  .faq-item{ border-bottom:1px solid var(--border); }
+  .faq-q{
+    width:100%; background:none; border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+    padding:26px 8px; text-align:left;
+    font-family: var(--serif); font-size:1.22rem; font-weight:600; color: var(--navy);
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .faq-q:hover{ background: var(--brass-soft); color: var(--navy); }
+  .faq-q:active{ background: rgba(184,137,63,0.28); }
+  .faq-icon{
+    font-family: var(--mono); color: var(--brass); flex-shrink:0;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .faq-item.open .faq-icon{ transform: rotate(45deg); }
+  .faq-a{
+    display:grid; grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .faq-item.open .faq-a{ grid-template-rows: 1fr; }
+  .faq-a-inner{ overflow:hidden; }
+  .faq-a p{
+    padding:0 8px 26px; color: var(--ink-dim); max-width:640px; font-size:1.05rem;
+    opacity:0; transform: translateY(-6px);
+    transition: opacity 0.4s ease 0.08s, transform 0.4s ease 0.08s;
+  }
+  .faq-item.open .faq-a p{ opacity:1; transform:none; }
 
   /* ---------- About ---------- */
   .about{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:64px; align-items:start; }
-  .about-card{ background: var(--surface); border:1px solid var(--border); border-radius:6px; padding:34px; }
-  .avatar-big{ width:60px; height:60px; border-radius:4px; background: var(--navy); display:flex; align-items:center; justify-content:center; font-family: var(--serif); font-weight:600; font-size:1.5rem; margin-bottom:22px; color: var(--brass); }
-  .about-card h3{ font-family: var(--serif); font-size:1.22rem; margin-bottom:10px; color: var(--navy); }
-  .about-card p{ color: var(--ink-dim); font-size:0.93rem; margin-bottom:22px; }
+  .about-card{ background: var(--surface); border:1px solid var(--border); border-radius:8px; padding:34px; }
+  .avatar-big{ width:64px; height:64px; border-radius:8px; background: var(--navy); display:flex; align-items:center; justify-content:center; font-family: var(--serif); font-weight:600; font-size:1.6rem; margin-bottom:22px; color: var(--brass); }
+  .about-card h3{ font-family: var(--serif); font-size:1.35rem; margin-bottom:10px; color: var(--navy); }
+  .about-card p{ color: var(--ink-dim); font-size:1rem; margin-bottom:22px; }
   .stack-list{ display:flex; flex-wrap:wrap; gap:8px; }
-  .stack-tag{ font-family: var(--mono); font-size:0.7rem; color: var(--ink-dim); border:1px solid var(--border-strong); padding:5px 11px; border-radius:2px; }
-  .about-copy p{ color: var(--ink-dim); margin-bottom:20px; font-size:1.04rem; }
+  .stack-tag{ font-family: var(--mono); font-size:0.72rem; font-weight:500; color: var(--ink-dim); border:1px solid var(--border-strong); padding:6px 12px; border-radius:2px; }
+  .about-copy p{ color: var(--ink-dim); margin-bottom:20px; font-size:1.12rem; }
   .about-copy p:last-child{ margin-bottom:0; }
 
-  /* ---------- Glass CTA (contrast moment) ---------- */
+  /* ---------- Glass CTA ---------- */
   .glass-cta-section{
-    position:relative; overflow:hidden; padding:120px 24px;
+    position:relative; overflow:hidden; padding:120px 24px; z-index:2;
     background: linear-gradient(160deg, #140B30, #1D0F42 45%, #0B0F2C 100%);
     border-top:none;
   }
   .glass-cta-section::before{
     content:""; position:absolute; inset:-25%;
     background: radial-gradient(circle at 25% 30%, rgba(150,100,255,0.35), transparent 55%),
-                radial-gradient(circle at 75% 70%, rgba(169,129,74,0.22), transparent 55%);
+                radial-gradient(circle at 75% 70%, rgba(184,137,63,0.22), transparent 55%);
     filter: blur(50px);
     animation: ctaDrift 14s ease-in-out infinite alternate;
   }
   @keyframes ctaDrift{ from{ transform: translate(0,0) scale(1); } to{ transform: translate(-4%,3%) scale(1.08); } }
   .glass-panel{
     position:relative; z-index:1; max-width:660px; margin:0 auto; text-align:center;
-    background: rgba(255,255,255,0.06); backdrop-filter: blur(18px);
-    border:1px solid rgba(255,255,255,0.14); border-radius:20px; padding:56px 44px;
+    background: rgba(255,255,255,0.08); backdrop-filter: blur(18px);
+    border:1px solid rgba(255,255,255,0.18); border-radius:20px; padding:56px 44px;
   }
   .glass-panel .eyebrow{ justify-content:center; color: var(--brass); }
   .glass-panel h2{ color:#fff; }
-  .glass-panel p{ color: rgba(255,255,255,0.68); max-width:460px; margin:0 auto; }
+  .glass-panel p{ color: rgba(255,255,255,0.88); max-width:460px; margin:0 auto; font-size:1.12rem; }
   .pill-ctas{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:30px; }
-  .pill-btn{ font-family: var(--mono); font-size:0.88rem; padding:16px 30px; border-radius:999px; display:inline-flex; align-items:center; gap:10px; transition: transform 0.2s ease, background 0.2s ease; }
-  .pill-primary{ background: linear-gradient(120deg, var(--brass), #C9A063); color:#1A1206; font-weight:600; }
-  .pill-primary:hover{ transform: translateY(-2px); }
-  .pill-ghost{ border:1px solid rgba(255,255,255,0.3); color:#fff; background: rgba(255,255,255,0.05); }
-  .pill-ghost:hover{ background: rgba(255,255,255,0.14); }
+  .pill-btn{ font-family: var(--mono); font-size:0.9rem; padding:16px 30px; border-radius:999px; display:inline-flex; align-items:center; gap:10px; cursor:pointer; border:none;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
+  .pill-primary{ background: linear-gradient(120deg, var(--brass), #D4AE6A); color:#1A1206; font-weight:700; }
+  .pill-primary:hover{ transform: translateY(-5px); box-shadow: 0 16px 30px -12px rgba(0,0,0,0.45); }
+  .pill-ghost{ background: var(--blue); color:#fff; border:2px solid var(--blue); }
+  .pill-ghost:hover{ background: var(--blue-2); border-color: var(--blue-2); transform: translateY(-5px); box-shadow: 0 16px 30px -12px rgba(37,99,235,0.55); }
 
   /* ---------- Contact ---------- */
   .contact-panel{ background: var(--navy); border-radius:10px; padding:64px; display:grid; grid-template-columns: 1fr 1fr; gap:56px; position:relative; overflow:hidden; }
-  .contact-panel::before{ content:""; position:absolute; top:-30%; right:-10%; width:50%; height:140%; background: radial-gradient(circle, rgba(169,129,74,0.18), transparent 65%); pointer-events:none; }
+  .contact-panel::before{ content:""; position:absolute; top:-30%; right:-10%; width:50%; height:140%; background: radial-gradient(circle, rgba(184,137,63,0.2), transparent 65%); pointer-events:none; }
   .contact-info .eyebrow{ color: var(--brass); }
   .contact-info h2{ color:#fff; margin-bottom:14px; }
-  .contact-info p{ color: rgba(255,255,255,0.65); margin-bottom:30px; }
-  .contact-line{ display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:0.92rem; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.14); color: #fff; }
-  .contact-line .k{ color: rgba(255,255,255,0.45); width:80px; flex-shrink:0; }
+  .contact-info p{ color: rgba(255,255,255,0.86); margin-bottom:30px; font-size:1.08rem; }
+  .contact-line{ display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:0.95rem; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.18); color: #fff; }
+  .contact-line .k{ color: rgba(255,255,255,0.55); width:80px; flex-shrink:0; }
   .contact-line a:hover{ color: var(--brass); }
 
-  .contact-form{ background: var(--surface); border-radius:6px; padding:28px; position:relative; z-index:1; }
+  .contact-form{ background: var(--surface); border-radius:8px; padding:28px; position:relative; z-index:1; }
   .field{ margin-bottom:18px; }
-  .field label{ display:block; color: var(--ink-faint); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; font-family: var(--mono); }
-  .field input, .field textarea{ width:100%; background: var(--bg); border:1px solid var(--border-strong); border-radius:2px; padding:12px 14px; color: var(--ink); font-family:var(--body); font-size:0.92rem; }
-  .field input:focus, .field textarea:focus{ outline:none; border-color: var(--navy); }
+  .field label{ display:block; color: var(--ink-dim); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; font-family: var(--mono); font-weight:600; }
+  .field input, .field textarea, .field select{
+    width:100%; background: var(--bg); border:1px solid var(--border-strong); border-radius:2px;
+    padding:13px 14px; color: var(--ink); font-family:var(--body); font-size:1rem;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus{ outline:none; border-color: var(--navy); }
   .field textarea{ resize:vertical; min-height:90px; }
-  .submit-btn{ width:100%; font-family: var(--mono); font-size:0.86rem; background: var(--navy); color:#fff; padding:14px; border-radius:2px; border:none; cursor:pointer; transition: background 0.2s ease; }
-  .submit-btn:hover{ background: var(--navy-2); }
+  .submit-btn{ width:100%; display:block; text-align:center; font-family: var(--mono); font-size:0.9rem; background: var(--blue); color:#fff; padding:15px; border-radius:2px; border:none; cursor:pointer;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
+
+  /* ---------- Chat widget ---------- */
+  .chat-launch{
+    position:fixed; right:22px; bottom:22px; z-index:90;
+    width:58px; height:58px; border-radius:50%; border:none; cursor:pointer;
+    background: var(--navy); color:#fff;
+    box-shadow: 0 16px 32px -12px rgba(19,35,63,0.55);
+    display:flex; align-items:center; justify-content:center;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .chat-launch:hover{ transform: translateY(-4px) scale(1.06); background: var(--navy-2); }
+  .chat-launch svg{ width:26px; height:26px; fill:currentColor; }
+  .chat-panel{
+    position:fixed; right:22px; bottom:92px; z-index:90;
+    width:min(380px, calc(100vw - 32px)); height:520px;
+    background:#fff; border-radius:16px; overflow:hidden;
+    box-shadow: 0 28px 60px -20px rgba(16,20,28,0.45);
+    border:1px solid var(--border);
+    display:none; flex-direction:column;
+  }
+  .chat-panel.open{ display:flex; }
+  .chat-head{
+    background: var(--navy); color:#fff; padding:14px 16px;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+  }
+  .chat-head strong{ font-family: var(--serif); font-size:1.05rem; }
+  .chat-head p{ font-size:0.75rem; color:rgba(255,255,255,0.72); margin-top:2px; }
+  .chat-head button{ background:none; border:0; color:#fff; font-size:1.2rem; cursor:pointer; }
+  .chat-book{
+    display:block; text-align:center; padding:10px; font-family:var(--mono); font-size:0.75rem; font-weight:600;
+    background: var(--blue); color:#fff; cursor:pointer; border:none; width:100%;
+  }
+  .chat-book:hover{ background: var(--blue-2); }
+  .chat-log{ flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px; background: var(--bg); }
+  .chat-bubble{ max-width:82%; padding:10px 12px; border-radius:12px; font-size:0.9rem; line-height:1.45; }
+  .chat-bubble.bot{ background:#fff; color: var(--ink); border:1px solid var(--border); align-self:flex-start; }
+  .chat-bubble.user{ background: var(--navy); color:#fff; align-self:flex-end; }
+  .chat-form{ display:flex; gap:8px; padding:12px; border-top:1px solid var(--border); background:#fff; }
+  .chat-form input{
+    flex:1; border:1px solid var(--border-strong); border-radius:999px; padding:10px 14px;
+    font-family: var(--body); font-size:0.9rem;
+  }
+  .chat-form input:focus{ outline:none; border-color: var(--navy); }
+  .chat-form button{
+    border:none; background: var(--navy); color:#fff; border-radius:999px; padding:10px 16px;
+    font-family: var(--mono); font-size:0.8rem; cursor:pointer;
+  }
 
   /* ---------- Footer ---------- */
-  footer{ border-top:1px solid var(--border); padding:40px 0; }
+  footer{ border-top:1px solid var(--border); padding:40px 0; background: var(--bg); position:relative; z-index:2; }
   footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
-  footer p{ font-size:0.82rem; color: var(--ink-faint); }
+  footer p{ font-size:0.86rem; color: var(--ink-faint); }
 
   @media (max-width:860px){
     .nav-links{ display:none; }
-    .samples-grid{ grid-template-columns:1fr; }
-    .about{ grid-template-columns:1fr; }
-    .contact-panel{ grid-template-columns:1fr; padding:36px 24px; }
-    .cap-body-inner{ padding-left:4px; }
+    .services-grid, .builds-grid, .about, .contact-panel{ grid-template-columns:1fr; }
+    .contact-panel{ padding:36px 24px; }
+    h1{ font-size: clamp(2.2rem, 9vw, 3.1rem); }
+    .hero{ min-height: auto; position: relative; top:auto; }
   }
   @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 </style>
@@ -289,113 +380,102 @@
 
 <header>
   <nav class="wrap">
-    <a href="#" class="logo"><span class="mark"></span>AI Agencey</a>
+    <a href="#" class="logo">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M46 22.5a18 18 0 1 0 2.2 17.2" fill="none" stroke="#13233F" stroke-width="7.5" stroke-linecap="round"/>
+        <path d="M32 32h16" stroke="#13233F" stroke-width="7.5" stroke-linecap="round"/>
+        <circle cx="50" cy="32" r="4.2" fill="#B8893F"/>
+      </svg>
+      GetWebNow
+    </a>
     <div class="nav-links">
-      <a href="#capabilities">Capabilities</a>
+      <a href="#services">How we help</a>
       <a href="#process">Process</a>
-      <a href="#samples">Selected Builds</a>
-      <a href="#about">About</a>
+      <a href="#samples">Results</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <a href="#contact" class="nav-cta">Start a project</a>
+    <a href="https://cal.com/hashmat/30min?theme=light" class="nav-cta" target="_blank" rel="noopener">Book online</a>
   </nav>
 </header>
 
 <section class="hero">
   <canvas id="network"></canvas>
   <div class="wrap hero-inner">
-    <div class="eyebrow">Independent AI-powered agency</div>
-    <h1>I build the systems that run your <em>front office</em> — while you run the job.</h1>
-    <p class="lead">Websites, AI chatbots, review automation, and booking systems — designed and wired together, built by one person with an AI-powered stack.</p>
+    <div class="eyebrow">For growing businesses</div>
+    <h1>We help your business <em>make more money</em> — with a better website and automations that actually work.</h1>
+    <p class="lead">Outdated sites lose customers. Manual follow-up wastes hours. We update your website, automate the busywork, and fix the problems that keep people from booking you.</p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">Start a project →</a>
-      <a href="#capabilities" class="btn btn-ghost">See what I build</a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="btn btn-primary" target="_blank" rel="noopener">Book a call →</a>
+      <a href="#services" class="btn btn-ghost">See how we help</a>
     </div>
     <div class="hero-card">
-      <div class="hc-label">Currently running</div>
-      <div class="hc-line"><span class="mkr">●</span><span>Website — live</span></div>
-      <div class="hc-line"><span class="mkr">●</span><span>Chatbot — answering, 24/7</span></div>
-      <div class="hc-line"><span class="mkr">●</span><span>Booking + review automation — active</span></div>
+      <div class="hc-label">What this means for you</div>
+      <div class="hc-line"><span class="mkr">●</span><span>More leads from a site that converts</span></div>
+      <div class="hc-line"><span class="mkr">●</span><span>A chatbot that answers while you’re on the job</span></div>
+      <div class="hc-line"><span class="mkr">●</span><span>Booking and follow-up that run without you</span></div>
     </div>
   </div>
 </section>
 
-<section id="capabilities">
+<section id="services">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Capabilities</div>
-      <h2>Five systems, one business</h2>
-      <p>Each one works on its own. Together, they run your front office without you touching it.</p>
+      <div class="eyebrow">How we help</div>
+      <h2>Problems we solve for your business</h2>
+      <p>If customers can’t find you, can’t book you, or you spend nights on follow-up — that’s revenue walking away. We fix it.</p>
     </div>
 
-    <div class="cap-list reveal">
-      <div class="cap-item open">
-        <div class="cap-head">
-          <span class="cap-num">01</span>
-          <span class="cap-title">Website Building</span>
-          <span class="cap-toggle">+</span>
-        </div>
-        <div class="cap-body">
-          <div class="cap-body-inner">
-            <img class="cap-thumb" src="https://images.unsplash.com/photo-1774901128215-3549cc686921?fm=jpg&q=60&w=400&auto=format&fit=crop" alt="Code on screen">
-            <p>Fast, custom-built sites — no page builders, no bloated templates. Built to load instantly and turn visitors into calls.</p>
-            <div class="cap-tags"><span class="cap-tag">Next.js</span><span class="cap-tag">Vercel</span><span class="cap-tag">Mobile-first</span></div>
+    <div class="services-grid reveal">
+      <a href="https://cal.com/hashmat/30min?theme=light" class="service-card lift" target="_blank" rel="noopener">
+        <img class="service-img" src="https://images.unsplash.com/photo-1774901128215-3549cc686921?fm=jpg&q=50&w=480&auto=format&fit=crop" alt="Custom website on a screen" width="480" height="200" loading="lazy" decoding="async">
+        <div class="service-body">
+          <div class="service-top">
+            <h3>Website updates</h3>
+            <span class="service-cta">Get a quote →</span>
           </div>
+          <p>Replace a slow, outdated site with one that loads fast, looks current, and turns visitors into paying customers.</p>
         </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-head">
-          <span class="cap-num">02</span>
-          <span class="cap-title">AI Chatbots</span>
-          <span class="cap-toggle">+</span>
-        </div>
-        <div class="cap-body">
-          <div class="cap-body-inner">
-            <img class="cap-thumb" src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?fm=jpg&q=60&w=400&auto=format&fit=crop" alt="AI processor render">
-            <p>A chatbot trained on your business — answers questions, qualifies leads, and never clocks out.</p>
-            <div class="cap-tags"><span class="cap-tag">24/7</span><span class="cap-tag">Lead capture</span><span class="cap-tag">Custom trained</span></div>
+      </a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="service-card lift" target="_blank" rel="noopener">
+        <img class="service-img" src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?fm=jpg&q=50&w=480&auto=format&fit=crop" alt="AI system hardware" width="480" height="200" loading="lazy" decoding="async">
+        <div class="service-body">
+          <div class="service-top">
+            <h3>AI chatbots</h3>
+            <span class="service-cta">Get a quote →</span>
           </div>
+          <p>Stop missing calls. A chatbot answers questions, qualifies leads, and books jobs — even after hours, when you’d otherwise lose the sale.</p>
         </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-head">
-          <span class="cap-num">03</span>
-          <span class="cap-title">Review Automation</span>
-          <span class="cap-toggle">+</span>
-        </div>
-        <div class="cap-body">
-          <div class="cap-body-inner">
-            <img class="cap-thumb" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=jpg&q=60&w=400&auto=format&fit=crop" alt="Marketing analytics on laptop">
-            <p>Review requests go out automatically, at the right moment — your reputation grows without you asking for it.</p>
-            <div class="cap-tags"><span class="cap-tag">Auto follow-up</span><span class="cap-tag">Reputation</span></div>
+      </a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="service-card lift" target="_blank" rel="noopener">
+        <img class="service-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=jpg&q=50&w=480&auto=format&fit=crop" alt="Analytics dashboard" width="480" height="200" loading="lazy" decoding="async">
+        <div class="service-body">
+          <div class="service-top">
+            <h3>Review automation</h3>
+            <span class="service-cta">Get a quote →</span>
           </div>
+          <p>More 5-star reviews mean more customers finding you. Requests go out automatically after a job — you don’t have to chase anyone.</p>
         </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-head">
-          <span class="cap-num">04</span>
-          <span class="cap-title">Appointment Booking</span>
-          <span class="cap-toggle">+</span>
-        </div>
-        <div class="cap-body">
-          <div class="cap-body-inner">
-            <p>Customers book straight into your calendar. Reminders go out automatically — fewer no-shows, less back and forth.</p>
-            <div class="cap-tags"><span class="cap-tag">Calendar sync</span><span class="cap-tag">Reminders</span></div>
+      </a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="service-card lift" target="_blank" rel="noopener">
+        <img class="service-img" src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?fm=jpg&q=50&w=480&auto=format&fit=crop" alt="Calendar booking on a desk" width="480" height="200" loading="lazy" decoding="async">
+        <div class="service-body">
+          <div class="service-top">
+            <h3>Online booking</h3>
+            <span class="service-cta">Get a quote →</span>
           </div>
+          <p>Let customers book themselves. Fewer missed jobs, fewer no-shows, and less time spent on the phone.</p>
         </div>
-      </div>
-      <div class="cap-item">
-        <div class="cap-head">
-          <span class="cap-num">05</span>
-          <span class="cap-title">Custom Automation</span>
-          <span class="cap-toggle">+</span>
-        </div>
-        <div class="cap-body">
-          <div class="cap-body-inner">
-            <p>Quoting, follow-ups, data entry — any repetitive task in the business, built into a workflow that runs itself.</p>
-            <div class="cap-tags"><span class="cap-tag">Python</span><span class="cap-tag">Workflows</span></div>
+      </a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="service-card lift" target="_blank" rel="noopener">
+        <img class="service-img" src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?fm=jpg&q=50&w=480&auto=format&fit=crop" alt="Automation workflow on a laptop" width="480" height="200" loading="lazy" decoding="async">
+        <div class="service-body">
+          <div class="service-top">
+            <h3>Business automations</h3>
+            <span class="service-cta">Get a quote →</span>
           </div>
+          <p>Quotes, follow-ups, reminders, data entry — if you do it over and over, we turn it into a system that runs itself so you can take more work.</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -404,7 +484,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">How it works</div>
-      <h2>From first call to running system</h2>
+      <h2>From your problem to more booked work</h2>
     </div>
 
     <div class="timeline reveal">
@@ -416,29 +496,29 @@
       <div class="tl-step active">
         <div class="tl-dot">01</div>
         <div class="tl-content">
-          <h4>Understand the business</h4>
-          <p>A short call to understand what the business needs — website, chatbot, booking, or all three.</p>
+          <h4>Find what’s costing you money</h4>
+          <p>A short call to pinpoint where you’re losing leads — a dated website, missed calls, slow follow-up, or jobs that never get booked.</p>
         </div>
       </div>
       <div class="tl-step">
         <div class="tl-dot">02</div>
         <div class="tl-content">
-          <h4>Design &amp; build</h4>
-          <p>A custom site and systems get built — no templates, styled around the business itself.</p>
+          <h4>Update the website</h4>
+          <p>We rebuild or refresh your site so it looks current, loads fast, and makes it obvious how to hire you.</p>
         </div>
       </div>
       <div class="tl-step">
         <div class="tl-dot">03</div>
         <div class="tl-content">
-          <h4>Connect the automation</h4>
-          <p>Chatbot, booking, and review systems get wired in and tested end-to-end before going live.</p>
+          <h4>Automate the busywork</h4>
+          <p>Chatbot, booking, reviews, and follow-ups get connected so the work happens even when you’re with a customer.</p>
         </div>
       </div>
       <div class="tl-step">
         <div class="tl-dot">04</div>
         <div class="tl-content">
-          <h4>Launch &amp; iterate</h4>
-          <p>The system goes live, and keeps evolving — new pages and automations added as the business grows.</p>
+          <h4>Watch it pay off</h4>
+          <p>You go live with a site and systems that keep bringing in jobs. We stay on to tweak as the business grows.</p>
         </div>
       </div>
     </div>
@@ -448,16 +528,16 @@
 <section id="samples">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Selected builds</div>
-      <h2>Real projects, not mockups</h2>
-      <p>One live nonprofit client site, and two demo builds used to test new templates and features before they go to clients.</p>
+      <div class="eyebrow">Proof it works</div>
+      <h2>Businesses already using this</h2>
+      <p>Real sites we shipped — built to get more inquiries, make booking obvious, and take busywork off the owner’s plate.</p>
     </div>
 
     <div class="builds-grid reveal">
-      <div class="build-card">
+      <div class="build-card lift">
         <div class="build-top">
           <span class="build-name">Cascade Plumbing &amp; Drain</span>
-          <span class="build-tag">Demo build</span>
+          <span class="build-tag live">Live project</span>
         </div>
         <p class="build-quote">"Everything I needed was right there — pricing, service list, and booking, without digging through five pages."</p>
         <div class="build-stat">
@@ -465,18 +545,18 @@
           <span class="val">Next.js · Tailwind · shadcn/ui</span>
         </div>
         <div class="build-attr">
-          <img class="build-avatar" src="https://images.unsplash.com/photo-1742518424481-b39a7cb4c80e?fm=jpg&q=60&w=100&auto=format&fit=crop" alt="">
+          <img class="build-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=50&w=80&auto=format&fit=crop" alt="Jason T. profile photo" width="46" height="46" loading="lazy" decoding="async">
           <div>
-            <div class="build-attr-name">Jason T. <span style="color:var(--ink-faint); font-weight:400;">(Demo Customer)</span></div>
+            <div class="build-attr-name">Jason T.</div>
             <div class="build-attr-role"><a href="https://cascade-three-liart.vercel.app" target="_blank" rel="noopener">cascade-three-liart.vercel.app →</a></div>
           </div>
         </div>
       </div>
 
-      <div class="build-card">
+      <div class="build-card lift">
         <div class="build-top">
           <span class="build-name">The 12-Week Reset</span>
-          <span class="build-tag">Demo build</span>
+          <span class="build-tag live">Live project</span>
         </div>
         <p class="build-quote">"First program landing page I've seen that actually explained the pricing before asking me to book a call."</p>
         <div class="build-stat">
@@ -484,15 +564,15 @@
           <span class="val">v0.app · Vercel</span>
         </div>
         <div class="build-attr">
-          <img class="build-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=jpg&q=60&w=100&auto=format&fit=crop" alt="">
+          <img class="build-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=jpg&q=50&w=80&auto=format&fit=crop" alt="Sarah K. profile photo" width="46" height="46" loading="lazy" decoding="async">
           <div>
-            <div class="build-attr-name">Sarah K. <span style="color:var(--ink-faint); font-weight:400;">(Demo Customer)</span></div>
+            <div class="build-attr-name">Sarah K.</div>
             <div class="build-attr-role"><a href="https://the-12-week-reset.vercel.app" target="_blank" rel="noopener">the-12-week-reset.vercel.app →</a></div>
           </div>
         </div>
       </div>
 
-      <div class="build-card">
+      <div class="build-card lift">
         <div class="build-top">
           <span class="build-name">Wahaj Welfare Organization</span>
           <span class="build-tag live">Live project</span>
@@ -503,7 +583,7 @@
           <span class="val">258 patients · 47 women reached</span>
         </div>
         <div class="build-attr">
-          <div class="build-avatar initials">W</div>
+          <img class="build-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=jpg&q=50&w=80&auto=format&fit=crop" alt="Wahaj Welfare contact profile photo" width="46" height="46" loading="lazy" decoding="async">
           <div>
             <div class="build-attr-name">Wahaj Welfare Organization</div>
             <div class="build-attr-role"><a href="https://wahajwelfare.org" target="_blank" rel="noopener">wahajwelfare.org →</a></div>
@@ -514,12 +594,40 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>What business owners ask</h2>
+      <p>Straight answers. If your situation is different, book a call and we’ll map the fix together.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item open">
+        <button class="faq-q" type="button">How fast will this start making a difference? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Most website updates go live in 1–2 weeks. Chatbots, booking, and review follow-up usually ship in the same window. You’ll know the timeline — and what it should do for your revenue — before we start.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Do I have to pause my business while you work? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>No. You keep taking jobs. We handle the site, copy, and automations. If you already have photos or branding, we use them. If you don’t, we take care of that too.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">How do you price this? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>You get a quote after we understand what’s losing you money — not a one-size price list. Clear number up front. No surprise add-ons after you say yes.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">What if something breaks after launch? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>We stay on. Tweaks, new pages, extra automations — you’re talking to the person who built it, not a ticket queue. The point is your business keeps making money, not a one-time handoff.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="wrap about">
     <div class="about-card reveal">
       <div class="avatar-big">H</div>
       <h3>Hashmatullah</h3>
-      <p>Builder behind AI Agencey. Working solo, using an AI-powered stack to build and ship faster than a typical agency team.</p>
+      <p>I help businesses make more money with better websites and automations — without hiring a big agency.</p>
       <div class="stack-list">
         <span class="stack-tag">Next.js</span>
         <span class="stack-tag">Vercel</span>
@@ -529,23 +637,23 @@
       </div>
     </div>
     <div class="about-copy reveal">
-      <div class="eyebrow">Who's behind this</div>
-      <h2>One person, an AI-powered stack, and a focus on local business.</h2>
-      <p>AI Agencey builds websites and automation for local trade businesses — plumbers, contractors, and service providers who need a real online presence without the overhead of a big agency.</p>
-      <p>Every project is hands-on, built with modern tools, and designed to keep working long after launch — no handoff, no disappearing after the invoice.</p>
-      <img src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?fm=jpg&q=60&w=900&auto=format&fit=crop" alt="AI processor render" style="width:100%; border-radius:8px; margin-top:28px; border:1px solid var(--border);">
+      <div class="eyebrow">Who this is for</div>
+      <h2>Built for owners who want more jobs, not more busywork.</h2>
+      <p>GetWebNow works with businesses that are losing money to an old website, missed calls, and follow-up that never happens. We update the site, add automations, and solve the problems standing between you and more customers.</p>
+      <p>You stay focused on the work. The website, chatbot, booking, and follow-up keep bringing jobs in — and we don’t disappear after launch.</p>
+      <img src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?fm=jpg&q=50&w=720&auto=format&fit=crop" alt="Systems that keep a business running" width="720" height="400" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:8px; margin-top:28px; border:1px solid var(--border);">
     </div>
   </div>
 </section>
 
 <section class="glass-cta-section">
   <div class="glass-panel reveal">
-    <div class="eyebrow">Ready when you are</div>
-    <h2>Ready to put this to work for your business?</h2>
-    <p>A short call or a quick email — either way, I'll tell you honestly what would actually help.</p>
+    <div class="eyebrow">Let’s grow your revenue</div>
+    <h2>Ready to stop losing customers to a slow site and manual work?</h2>
+    <p>Book a 30-minute call. We’ll look at what’s costing you money and tell you honestly what would actually help.</p>
     <div class="pill-ctas">
-      <a href="tel:2533970341" class="pill-btn pill-primary">📞 Call me directly</a>
-      <a href="mailto:hash@ai-agencey.com" class="pill-btn pill-ghost">✉️ Email instead</a>
+      <a href="tel:2533970341" class="pill-btn pill-primary">Call me directly</a>
+      <a href="https://cal.com/hashmat/30min?theme=light" class="pill-btn pill-ghost" target="_blank" rel="noopener">Book online</a>
     </div>
   </div>
 </section>
@@ -554,29 +662,16 @@
   <div class="wrap">
     <div class="contact-panel reveal">
       <div class="contact-info">
-        <div class="eyebrow">Get in touch</div>
-        <h2>Let's build something.</h2>
-        <p>Tell me what you're working with, and I'll come back with a plan — no pressure, no long sales calls.</p>
+        <div class="eyebrow">Talk to us</div>
+        <h2>Tell us what’s slowing your business down.</h2>
+        <p>Old website, missed leads, too much time on follow-up — we’ll come back with a plan to fix it and help you make more money.</p>
         <div class="contact-line"><span class="k">Phone</span><a href="tel:2533970341">(253) 397-0341</a></div>
         <div class="contact-line"><span class="k">Email</span><a href="mailto:hash@ai-agencey.com">hash@ai-agencey.com</a></div>
       </div>
 
       <div class="contact-form">
-        <form>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name">
-          </div>
-          <div class="field">
-            <label for="business">Business</label>
-            <input id="business" type="text" placeholder="Your business name">
-          </div>
-          <div class="field">
-            <label for="message">What do you need?</label>
-            <textarea id="message" placeholder="Tell me a bit about what you're looking for"></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send message →</button>
-        </form>
+        <p style="font-family:var(--mono); font-size:0.78rem; color:var(--ink-dim); margin-bottom:16px; font-weight:600;">30 minutes on the calendar. We’ll map how to get you more jobs.</p>
+        <a href="https://cal.com/hashmat/30min?theme=light" class="submit-btn" target="_blank" rel="noopener">Book a call →</a>
       </div>
     </div>
   </div>
@@ -584,83 +679,184 @@
 
 <footer>
   <div class="wrap">
-    <a href="#" class="logo"><span class="mark"></span>AI Agencey</a>
-    <p>© 2026 AI Agencey. Built with AI Agencey.</p>
+    <a href="#" class="logo">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M46 22.5a18 18 0 1 0 2.2 17.2" fill="none" stroke="#13233F" stroke-width="7.5" stroke-linecap="round"/>
+        <path d="M32 32h16" stroke="#13233F" stroke-width="7.5" stroke-linecap="round"/>
+        <circle cx="50" cy="32" r="4.2" fill="#B8893F"/>
+      </svg>
+      GetWebNow
+    </a>
+    <p>© 2026 GetWebNow · getwebnow.co</p>
   </div>
 </footer>
 
-<script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el=>io.observe(el));
+<button class="chat-launch" id="chat-launch" type="button" aria-label="Open chat">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10c-1.6 0-3.11-.365-4.46-1.02L2 22l1.06-5.3A9.94 9.94 0 0 1 2 12Z"/></svg>
+</button>
+<div class="chat-panel" id="chat-panel">
+  <div class="chat-head">
+    <div>
+      <strong>GetWebNow assistant</strong>
+      <p>Ask how we help your business grow</p>
+    </div>
+    <button type="button" id="chat-close" aria-label="Close chat">×</button>
+  </div>
+  <a href="https://cal.com/hashmat/30min?theme=light" class="chat-book" target="_blank" rel="noopener">Book a 30-min call on Cal.com</a>
+  <div class="chat-log" id="chat-log"></div>
+  <form class="chat-form" id="chat-form">
+    <input id="chat-input" type="text" placeholder="What’s costing your business money?" autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</div>
 
-  document.querySelectorAll('.cap-head').forEach(head=>{
-    head.addEventListener('click', ()=>{
-      const item = head.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.cap-item').forEach(i=>i.classList.remove('open'));
-      if(!isOpen) item.classList.add('open');
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const item = btn.parentElement;
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!open) item.classList.add('open');
     });
   });
 
   const tlLine = document.querySelector('.tl-line-fg');
   const tlSteps = document.querySelectorAll('.tl-step');
-  const tlIo = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        tlLine.classList.add('drawn');
-        tlSteps.forEach(s=>s.classList.add('active'));
-      }
-    });
-  }, { threshold: 0.2 });
   const timelineEl = document.querySelector('.timeline');
-  if(timelineEl) tlIo.observe(timelineEl);
+  if (timelineEl && 'IntersectionObserver' in window) {
+    const tlIo = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          tlLine.classList.add('drawn');
+          tlSteps.forEach(s=>s.classList.add('active'));
+          tlIo.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    tlIo.observe(timelineEl);
+  }
+
+  const chatPanel = document.getElementById("chat-panel");
+  const chatLog = document.getElementById("chat-log");
+  const chatInput = document.getElementById("chat-input");
+  function addBubble(role, text){
+    const div = document.createElement("div");
+    div.className = "chat-bubble " + role;
+    div.textContent = text;
+    chatLog.appendChild(div);
+    chatLog.scrollTop = chatLog.scrollHeight;
+  }
+  addBubble("bot", "Hi — GetWebNow helps businesses make more money with a better website and automations. Tell me what’s getting in the way, or book a 30-minute call.");
+  document.getElementById("chat-launch").addEventListener("click", () => {
+    chatPanel.classList.add("open");
+    chatInput.focus();
+  });
+  document.getElementById("chat-close").addEventListener("click", () => chatPanel.classList.remove("open"));
+
+  function botReply(raw){
+    const t = raw.toLowerCase();
+    if (/book|schedule|call|meeting|calendar|appointment|quote/.test(t)) {
+      return "Let’s get you on the calendar. Use Book a 30-min call above — we’ll look at what’s losing you money and map a fix.";
+    }
+    if (/money|revenue|sales|grow|leads|customers|profit/.test(t)) {
+      return "The usual leaks: an outdated website, missed calls, and follow-up that never happens. We update the site and automate those gaps so more people actually hire you.";
+    }
+    if (/price|cost|how much|expensive|rate/.test(t)) {
+      return "You get a quote after we see what’s costing you jobs — not a public price list. Clear number before any work starts.";
+    }
+    if (/chatbot|chat bot|assistant|missed call/.test(t)) {
+      return "A chatbot on your site answers after hours, captures the lead, and can send them to book. That’s jobs you would have lost to voicemail.";
+    }
+    if (/website|web site|landing|outdated|old site|update/.test(t)) {
+      return "We update or replace the site so it looks current, loads fast, and makes booking obvious. A dated site is one of the fastest ways to lose a customer to a competitor.";
+    }
+    if (/review/.test(t)) {
+      return "More reviews mean more customers finding you. We automate the ask right after a job so your reputation grows without you chasing people.";
+    }
+    if (/booking|calendar sync/.test(t)) {
+      return "Let customers book themselves. Fewer missed jobs, fewer no-shows, less time on the phone — same calendar flow this site uses.";
+    }
+    if (/automat|busywork|follow.?up/.test(t)) {
+      return "If you repeat it every week — quotes, reminders, follow-ups, data entry — we turn it into a system. You take more paying work instead of paperwork.";
+    }
+    if (/how long|timeline|week/.test(t)) {
+      return "Most website updates go live in 1–2 weeks. Automations usually ship in the same window. You’ll get a date before we start.";
+    }
+    if (/email|phone|contact/.test(t)) {
+      return "Call (253) 397-0341 or email hash@ai-agencey.com. Or book a time from the button above.";
+    }
+    return "Tell me the problem — old website, missed leads, no time for follow-up — and I’ll point to the fix. Or book a 30-minute call and we’ll map how to get you more jobs.";
+  }
+
+  document.getElementById("chat-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const text = chatInput.value.trim();
+    if (!text) return;
+    addBubble("user", text);
+    chatInput.value = "";
+    setTimeout(() => addBubble("bot", botReply(text)), 160);
+  });
 
   const canvas = document.getElementById('network');
-  const ctx = canvas.getContext('2d');
-  let w, h, points = [];
-  function resize(){ w = canvas.width = canvas.offsetWidth; h = canvas.height = canvas.offsetHeight; }
-  function initPoints(){
-    points = [];
-    const count = Math.min(46, Math.floor((w*h)/26000));
-    for(let i=0;i<count;i++){
-      points.push({ x: Math.random()*w, y: Math.random()*h, vx: (Math.random()-0.5)*0.2, vy: (Math.random()-0.5)*0.2 });
-    }
-  }
-  function step(){
-    ctx.clearRect(0,0,w,h);
-    for(const p of points){
-      p.x += p.vx; p.y += p.vy;
-      if(p.x<0||p.x>w) p.vx*=-1;
-      if(p.y<0||p.y>h) p.vy*=-1;
-    }
-    for(let i=0;i<points.length;i++){
-      for(let j=i+1;j<points.length;j++){
-        const dx = points[i].x-points[j].x, dy = points[i].y-points[j].y;
-        const dist = Math.sqrt(dx*dx+dy*dy);
-        if(dist < 130){
-          ctx.strokeStyle = `rgba(24,42,74,${0.10*(1-dist/130)})`;
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(points[i].x, points[i].y);
-          ctx.lineTo(points[j].x, points[j].y);
-          ctx.stroke();
-        }
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia('(max-width: 860px)').matches;
+  if (canvas && !reduceMotion && !isMobile) {
+    const ctx = canvas.getContext('2d', { alpha: true });
+    let w, h, points = [], running = false, raf;
+    function resize(){
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      w = Math.floor(rect.width);
+      h = Math.floor(rect.height);
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      points = [];
+      const count = Math.min(22, Math.floor((w * h) / 42000));
+      for (let i = 0; i < count; i++) {
+        points.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.18, vy: (Math.random() - 0.5) * 0.18 });
       }
     }
-    for(const p of points){
-      ctx.fillStyle = 'rgba(169,129,74,0.5)';
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 1.5, 0, Math.PI*2);
-      ctx.fill();
+    function stepNet(){
+      if (!running) return;
+      ctx.clearRect(0, 0, w, h);
+      for (const p of points) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+      }
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dx = points[i].x - points[j].x, dy = points[i].y - points[j].y;
+          const dist = dx * dx + dy * dy;
+          if (dist < 140 * 140) {
+            const t = 1 - Math.sqrt(dist) / 140;
+            ctx.strokeStyle = `rgba(19,35,63,${0.1 * t})`;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      ctx.fillStyle = 'rgba(184,137,63,0.45)';
+      for (const p of points) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      raf = requestAnimationFrame(stepNet);
     }
-    requestAnimationFrame(step);
+    window.addEventListener('resize', resize);
+    resize();
+    const hero = document.querySelector('.hero');
+    const vis = new IntersectionObserver((entries) => {
+      running = entries[0] && entries[0].isIntersecting;
+      if (running) stepNet();
+      else if (raf) cancelAnimationFrame(raf);
+    });
+    vis.observe(hero);
   }
-  window.addEventListener('resize', ()=>{ resize(); initPoints(); });
-  resize(); initPoints();
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){ step(); }
 </script>
 
 </body>
