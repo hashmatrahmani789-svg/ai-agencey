@@ -27,7 +27,7 @@ function replyTo(text) {
     return "Review automation sends the ask after the job is done, so happy customers actually leave reviews instead of you chasing them.";
   }
   if (hasAny(q, ["book a", "booking", "calendar", "schedule", "appointment", "diagnostic", "cal.com"])) {
-    return "Book 30 minutes on the calendar, or email hash@getwebnow.co / call (253) 397-0341. We look at the site, the inbox, and what is costing you work. Use Book a 30-min call above.";
+    return "Book 30 minutes on the calendar, email hash@getwebnow.co, call or WhatsApp (253) 397-0341, or open the Facebook page. We look at the site, the inbox, and what is costing you work. Use Book a 30-min call above.";
   }
   if (hasAny(q, ["website", "web site", "web page", "redesign", "landing page"])) {
     return "We build or refresh the website so hiring you is obvious: fast, current, services and the next step on the first screen. Live samples are on the Work page.";
@@ -41,8 +41,8 @@ function replyTo(text) {
   if (hasAny(q, ["hashmat", "founder", "who are you", "who is", "studio"])) {
     return "GetWebNow is led by Hashmatullah. You talk to the person who scopes and builds the work — not a ticket queue. Email hash@getwebnow.co.";
   }
-  if (hasAny(q, ["email", "phone", "contact", "reach"])) {
-    return "Email hash@getwebnow.co · Phone (253) 397-0341. That is the studio inbox — use it for quotes and questions.";
+  if (hasAny(q, ["email", "phone", "contact", "reach", "whatsapp", "facebook"])) {
+    return "Email hash@getwebnow.co · Phone or WhatsApp (253) 397-0341 · Facebook page facebook.com/getwebnow.co. That is the studio — use it for quotes and questions.";
   }
   if (hasAny(q, ["how long", "timeline", "how fast", "weeks"])) {
     return "Most website updates go live in 1–2 weeks. Chatbots, booking, and follow-up usually ship in the same window. You get the timeline before we start.";

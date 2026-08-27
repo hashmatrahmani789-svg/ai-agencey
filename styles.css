@@ -327,6 +327,8 @@ section{padding:84px 0}
 }
 .contact-line{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12)}
 .contact-line span{color:var(--faint)}
+.contact-line a{text-align:right}
+.contact-line a:hover{color:var(--cyan)}
 .page-hero{padding:48px 0 10px}
 
 footer{padding:28px 0 40px;color:var(--faint);font-size:.86rem}
