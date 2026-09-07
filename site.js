@@ -47,8 +47,8 @@ function replyTo(text) {
   if (hasAny(q, ["who is it for", "who do you", "trades", "clinic", "shop", "coach", "industry"])) {
     return "Trades, clinics, shops, coaches, firms, and nonprofits. If leads die on a weak website or in the inbox, we can build the system.";
   }
-  if (hasAny(q, ["cascade", "ridgeline", "wahaj", "reset", "roof", "plumb", "northline", "real estate", "realty", "portfolio", "live work", "projects", "samples"])) {
-    return "Selected live work: Cascade Plumbing, Ridgeline Roofing, 12-Week Reset, Wahaj Welfare, and Northline Realty. 150+ websites built successfully — we only list a few. Open the Work page to click through.";
+  if (hasAny(q, ["cascade", "ridgeline", "wahaj", "reset", "roof", "plumb", "northline", "real estate", "realty", "awevso", "afghan", "portfolio", "live work", "projects", "samples"])) {
+    return "Selected live work: Cascade Plumbing, AWEVSO, Ridgeline Roofing, 12-Week Reset, Wahaj Welfare, and Northline Realty. 150+ websites built successfully — we only list a few. Open the Work page to click through.";
   }
   if (hasAny(q, ["hashmat", "founder", "who are you", "who is", "studio"])) {
     return "GetWebNow is led by Hashmatullah. You talk to the person who scopes and builds the work — not a ticket queue. Email hash@getwebnow.co.";
