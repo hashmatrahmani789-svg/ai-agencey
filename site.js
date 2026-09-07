@@ -344,3 +344,64 @@ function animateCounts() {
 
 mountChat();
 animateCounts();
+mountSlideshow();
+
+function mountSlideshow() {
+  const root = document.querySelector("[data-slideshow]");
+  if (!root) return;
+  const viewport = root.querySelector(".work-show-viewport");
+  const track = root.querySelector(".work-show-track");
+  const slides = Array.from(root.querySelectorAll(".work-slide"));
+  const dotsWrap = root.querySelector(".work-show-dots");
+  const prev = root.querySelector(".work-show-nav.prev");
+  const next = root.querySelector(".work-show-nav.next");
+  if (!viewport || !track || !slides.length || !dotsWrap) return;
+
+  let index = 0;
+  let timer = null;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  dotsWrap.replaceChildren();
+  slides.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Show project " + (i + 1));
+    b.addEventListener("click", () => go(i, true));
+    dotsWrap.appendChild(b);
+  });
+
+  function layout() {
+    const w = viewport.clientWidth;
+    slides.forEach((s) => {
+      s.style.flex = "0 0 " + w + "px";
+      s.style.width = w + "px";
+      s.style.minWidth = w + "px";
+    });
+    track.style.transform = "translateX(-" + index * w + "px)";
+  }
+
+  function go(n, pause) {
+    index = (n + slides.length) % slides.length;
+    layout();
+    Array.from(dotsWrap.children).forEach((d, i) => {
+      d.classList.toggle("is-on", i === index);
+      if (i === index) d.setAttribute("aria-current", "true");
+      else d.removeAttribute("aria-current");
+    });
+    if (pause) restart();
+  }
+
+  function restart() {
+    if (reduce) return;
+    clearInterval(timer);
+    timer = setInterval(() => go(index + 1), 5000);
+  }
+
+  if (prev) prev.addEventListener("click", () => go(index - 1, true));
+  if (next) next.addEventListener("click", () => go(index + 1, true));
+  root.addEventListener("mouseenter", () => clearInterval(timer));
+  root.addEventListener("mouseleave", restart);
+  window.addEventListener("resize", layout);
+  go(0);
+  restart();
+}

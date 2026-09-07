@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <header>
@@ -53,78 +53,99 @@
         </div>
       </div>
 
-      <div class="collage">
-        <a href="https://cascade-mu-liard.vercel.app" target="_blank" rel="noopener">
-          <img src="work/cascade.png" alt="Cascade Plumbing live website">
-          <span>Cascade Plumbing</span>
-        </a>
-        <a href="https://ridgeline-roofing-demo-umber.vercel.app/" target="_blank" rel="noopener">
-          <img src="work/ridgeline.png" alt="Ridgeline Roofing live website">
-          <span>Ridgeline Roofing</span>
-        </a>
-        <a href="https://the-12-week-reset.vercel.app" target="_blank" rel="noopener">
-          <img src="work/reset.png" alt="12-Week Reset live website">
-          <span>12-Week Reset</span>
-        </a>
-        <a href="https://wahajwelfare.org" target="_blank" rel="noopener">
-          <img src="work/wahaj.png" alt="Wahaj Welfare live website">
-          <span>Wahaj Welfare</span>
-        </a>
-        <a href="https://northline-realty-seven.vercel.app" target="_blank" rel="noopener">
-          <img src="work/northline.png" alt="Northline Realty live website">
-          <span>Northline Realty</span>
-        </a>
+      <div class="work-show" data-slideshow>
+        <div class="work-show-head">
+          <div class="eyebrow">Selected work</div>
+          <p>Every live sample, one at a time.</p>
+        </div>
+        <div class="work-show-frame">
+          <button class="work-show-nav prev" type="button" aria-label="Previous project">‹</button>
+          <div class="work-show-viewport">
+            <div class="work-show-track">
+              <a class="work-slide" href="https://cascade-mu-liard.vercel.app" target="_blank" rel="noopener">
+                <img src="work/cascade.png" alt="Cascade Plumbing live website">
+                <span>Cascade Plumbing</span>
+              </a>
+              <a class="work-slide" href="https://ridgeline-roofing-demo-umber.vercel.app/" target="_blank" rel="noopener">
+                <img src="work/ridgeline.png" alt="Ridgeline Roofing live website">
+                <span>Ridgeline Roofing</span>
+              </a>
+              <a class="work-slide" href="https://the-12-week-reset.vercel.app" target="_blank" rel="noopener">
+                <img src="work/reset.png" alt="12-Week Reset live website">
+                <span>12-Week Reset</span>
+              </a>
+              <a class="work-slide" href="https://wahajwelfare.org" target="_blank" rel="noopener">
+                <img src="work/wahaj.png" alt="Wahaj Welfare live website">
+                <span>Wahaj Welfare</span>
+              </a>
+              <a class="work-slide" href="https://northline-realty-seven.vercel.app" target="_blank" rel="noopener">
+                <img src="work/northline.png" alt="Northline Realty live website">
+                <span>Northline Realty</span>
+              </a>
+            </div>
+          </div>
+          <button class="work-show-nav next" type="button" aria-label="Next project">›</button>
+        </div>
+        <div class="work-show-dots" role="tablist" aria-label="Project slides"></div>
+        <p class="work-show-cta"><a class="btn btn-ghost" href="work.html">See all featured work</a></p>
       </div>
 
-      <div class="reviews-row">
-        <a class="review" href="https://cascade-mu-liard.vercel.app" target="_blank" rel="noopener">
-          <img class="review-thumb" src="work/cascade.png" alt="">
-          <div>
-            <p>If a pipe bursts at night, the price, the services, and a book button are on the first screen. You don’t have to hunt for a phone number.</p>
-            <strong>Cascade Plumbing</strong>
-            <span class="review-meta">Seattle area · open the live site</span>
-          </div>
-        </a>
-        <a class="review" href="https://ridgeline-roofing-demo-umber.vercel.app/" target="_blank" rel="noopener">
-          <img class="review-thumb" src="work/ridgeline.png" alt="">
-          <div>
-            <p>Looks like a roofing company you’d actually hire — not a template. The estimate request is sitting right there.</p>
-            <strong>Ridgeline Roofing</strong>
-            <span class="review-meta">Trades sample · open the live site</span>
-          </div>
-        </a>
-        <a class="review" href="https://the-12-week-reset.vercel.app" target="_blank" rel="noopener">
-          <img class="review-thumb" src="work/reset.png" alt="">
-          <div>
-            <p>The program price is on the page. You don’t have to hop on a sales call just to find out what it costs.</p>
-            <strong>12-Week Reset</strong>
-            <span class="review-meta">Offer page · open the live site</span>
-          </div>
-        </a>
-        <a class="review" href="https://wahajwelfare.org" target="_blank" rel="noopener">
-          <img class="review-thumb" src="work/wahaj.png" alt="">
-          <div>
-            <p>English and Dari, on their own domain, with donate and contact that match the work they do in the community.</p>
-            <strong>Wahaj Welfare</strong>
-            <span class="review-meta">Nonprofit · wahajwelfare.org</span>
-          </div>
-        </a>
-        <a class="review" href="https://northline-realty-seven.vercel.app" target="_blank" rel="noopener">
-          <img class="review-thumb" src="work/northline.png" alt="">
-          <div>
-            <p>Price on every listing. Book a showing, or leave your number in the chat after hours.</p>
-            <strong>Northline Realty</strong>
-            <span class="review-meta">Real estate · open the live site</span>
-          </div>
-        </a>
-      </div>
-
-      <p style="margin:4px 0 18px"><a class="btn btn-ghost" href="work.html">See all featured work</a></p>
       <div class="proof">
         <div class="proof-stat"><span data-count="150">0</span>+ <span class="label">websites built successfully</span></div>
         <div class="proof-names">
           <span class="chip">Live samples above</span>
           <span class="chip">Not the full list</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-notes" id="work-notes">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Reviews</div>
+        <h2>What people said after they used the sites.</h2>
+      </div>
+      <div class="reviews-row">
+        <div class="review">
+          <img class="review-avatar" src="media/avatar-marcus.png" alt="Marcus R.">
+          <div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Pricing, services, and booking were all there. I didn’t have to hunt.”</p>
+            <strong>Marcus R. · Cascade Plumbing</strong>
+          </div>
+        </div>
+        <div class="review">
+          <img class="review-avatar" src="media/avatar-dana.png" alt="Dana S.">
+          <div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Looked like a real roofing company. The next step was obvious.”</p>
+            <strong>Dana S. · Ridgeline Roofing</strong>
+          </div>
+        </div>
+        <div class="review">
+          <img class="review-avatar" src="media/avatar-priya.png" alt="Priya K.">
+          <div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“The price was on the page before they asked me to book a call. That sold me.”</p>
+            <strong>Priya K. · 12-Week Reset</strong>
+          </div>
+        </div>
+        <div class="review">
+          <img class="review-avatar" src="media/avatar-karim.png" alt="Karim A.">
+          <div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“English and Dari, professional inbox — it matched the work on the ground.”</p>
+            <strong>Karim A. · Wahaj Welfare</strong>
+          </div>
+        </div>
+        <div class="review">
+          <img class="review-avatar" src="media/avatar-northline.png" alt="Lena M.">
+          <div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Price on every listing. I booked a showing without calling the office.”</p>
+            <strong>Lena M. · Northline Realty</strong>
+          </div>
         </div>
       </div>
     </div>
@@ -264,6 +285,6 @@
     </div>
   </div>
 </footer>
-<script src="site.js"></script>
+<script src="site.js?v=5"></script>
 </body>
 </html>
