@@ -209,7 +209,7 @@ header::before{
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 
 .collage{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:22px;
 }
 .collage a{
   border-radius:20px;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
@@ -292,16 +292,21 @@ section{padding:84px 0}
 .work-link{color:var(--cyan);font-weight:700}
 .work-link:hover{text-decoration:underline}
 .reviews-row{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0 28px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 28px;
 }
 .review{
   display:flex;gap:12px;align-items:flex-start;
   border-radius:18px;padding:14px;
+  color:inherit;
 }
-.review-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(103,232,249,.45);box-shadow:0 0 0 3px rgba(255,255,255,.08)}
-.stars{color:#f5c542;letter-spacing:2px;font-size:.92rem;line-height:1;margin-bottom:6px}
-.review p{font-size:.86rem;color:var(--ink);margin-bottom:6px}
-.review strong{font-size:.76rem;color:var(--muted);font-weight:600}
+a.review:hover{border-color:rgba(103,232,249,.45)}
+.review-thumb{
+  width:52px;height:52px;border-radius:12px;object-fit:cover;object-position:top;
+  flex-shrink:0;border:1px solid var(--line);
+}
+.review p{font-size:.86rem;color:var(--ink);margin-bottom:8px}
+.review strong{display:block;font-size:.8rem;color:var(--ink);font-weight:600}
+.review-meta{display:block;font-size:.72rem;color:var(--faint);margin-top:2px}
 
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .step{border-radius:20px;padding:22px}
